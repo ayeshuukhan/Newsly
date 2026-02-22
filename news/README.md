@@ -152,3 +152,5 @@ User selects "Technology + AI Ranking ON"
 ## License
 
 MIT — feel free to fork and extend!
+
+link : https://newsly-ecru.vercel.app/
