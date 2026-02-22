@@ -2,29 +2,27 @@
 
 A full-stack web application that fetches news articles based on user interests and uses an AI model to personalise recommendations.
 
----
-
-## 🗂 Project Structure
+## Project Structure
 
 ```
 news-ai-app/
 ├── backend/
-│   ├── server.js                  # Express entry point
-│   ├── routes/news.js             # API route definitions
-│   ├── controllers/newsController.js  # Request handling logic
-│   ├── services/newsService.js    # External NewsAPI integration
-│   ├── .env.example               # Environment variable template
+│   ├── server.js                  
+│   ├── routes/news.js            
+│   ├── controllers/newsController.js  
+│   ├── services/newsService.js   
+│   ├── .env.example              
 │   └── package.json
 │
 ├── frontend/
-│   ├── index.html                 # Main UI
-│   ├── style.css                  # Editorial dark theme
-│   └── script.js                  # Fetch + render logic
+│   ├── index.html                
+│   ├── style.css                  
+│   └── script.js               
 │
 ├── ai-service/
-│   ├── app.py                     # Flask AI ranking service
-│   ├── requirements.txt           # Python dependencies
-│   └── MODEL_PLACEHOLDER.md      # Instructions for model.pt
+│   ├── app.py                    
+│   ├── requirements.txt           
+│   └── MODEL_PLACEHOLDER.md      
 │
 └── README.md
 ```
