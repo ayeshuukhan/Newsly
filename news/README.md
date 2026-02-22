@@ -1,4 +1,4 @@
-# ⬡ NeuralPress — AI-Powered News Recommendation App
+# Newsly — AI-Powered News Recommendation App
 
 A full-stack web application that fetches news articles based on user interests and uses an AI model to personalise recommendations.
 
@@ -36,19 +36,15 @@ news-ai-app/
 ### 1. Prerequisites
 - Node.js ≥ 18
 - Python ≥ 3.10
-- A free [NewsAPI](https://newsapi.org/register) key
-
----
 
 ### 2. Backend
 
 ```bash
 cd backend
 cp .env.example .env
-# Edit .env and set NEWS_API_KEY=your_key_here
 
 npm install
-npm start          # or: npm run dev  (with hot-reload via nodemon)
+npm start        
 ```
 
 Server runs at `http://localhost:5000`
@@ -63,24 +59,20 @@ Open `http://localhost:5000` in your browser — no extra build step needed.
 For standalone dev, open `frontend/index.html` directly in a browser.
 > **Note:** update `API_BASE` in `script.js` if your backend runs on a different port.
 
----
 
 ### 4. AI Service (optional but recommended)
 
 ```bash
 cd ai-service
 python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
+source venv/bin/activate      
 
 pip install -r requirements.txt
-python app.py                 # runs on http://localhost:8000
+python app.py                
 ```
 
-Set `AI_SERVICE_URL=http://localhost:8000` in `backend/.env`.
 
----
-
-## 🔌 API Reference
+## API Reference
 
 ### `GET /api/news`
 
@@ -129,7 +121,7 @@ Returns server status and timestamp.
 
 ---
 
-## 🤖 AI Architecture
+## AI Architecture
 
 ```
 User selects "Technology + AI Ranking ON"
@@ -158,30 +150,7 @@ User selects "Technology + AI Ranking ON"
 2. **TF-IDF cosine similarity** (scikit-learn) — keyword-based ranking
 3. **Date sort** — newest first, if no ML libs available
 
----
 
-## 🌐 Environment Variables
-
-| Variable           | Description                          | Default              |
-|--------------------|--------------------------------------|----------------------|
-| `PORT`             | Backend server port                  | `5000`               |
-| `NEWS_API_KEY`     | NewsAPI.org API key                  | *(required)*         |
-| `AI_SERVICE_URL`   | URL of the Python AI service         | `http://localhost:8000` |
-| `FRONTEND_ORIGIN`  | CORS allowed origin                  | `*`                  |
-
----
-
-## 🚀 Future Enhancements
-
-- [ ] User accounts + preference persistence
-- [ ] Fine-tuned sentence transformer model for deeper personalisation
-- [ ] Redis caching layer to reduce NewsAPI quota usage
-- [ ] WebSocket-based live news feed
-- [ ] Browser extension using the `/api/news` endpoint
-- [ ] Docker Compose setup for one-command deployment
-
----
-
-## 📄 License
+## License
 
 MIT — feel free to fork and extend!
