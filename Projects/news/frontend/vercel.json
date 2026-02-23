@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "news/backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "news/frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "news/backend/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "news/frontend/$1"
+    }
+  ]
+}
